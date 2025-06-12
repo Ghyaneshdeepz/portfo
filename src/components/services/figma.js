@@ -3,7 +3,7 @@ export async function fetchFigmaData(fileKey) {
 
   const response = await fetch(url, {
     headers: {
-     
+      'X-Figma-Token': 'YOUR_FIGMA_API_TOKEN_HERE', 
     },
   });
 
