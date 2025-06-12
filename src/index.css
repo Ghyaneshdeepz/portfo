@@ -1,0 +1,31 @@
+
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+@keyframes border-width {
+  0% {
+    width: 10px;
+    opacity: 0;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+  }
+}
+
+.animate-border-width {
+  animation: border-width 3s infinite alternate;
+}
+
