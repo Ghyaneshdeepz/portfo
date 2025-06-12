@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { fetchFigmaData } from "./services/figma.js";
-import { getFigmaFileKey } from "./lib/getFigmaFileKey.js";
 import { convertNodeToTailwind } from "./lib/convertNodeToTailwind.js";
 
 const FigmaConverter = () => {
