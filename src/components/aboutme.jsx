@@ -53,7 +53,7 @@ export default function Aboutme() {
             </div>
 
             <div className="flex flex-col lg:flex-row p-4 mt-15 sm:p-6 gap-8">
-                <div className="w-full lg:w-1/2 flex flex-col gap-6">
+                <div className="w-full lg:w-1/2 py-10 flex flex-col gap-6">
                     <motion.div
                         ref={ref1}
                         animate={activeProject === 'portfolio' ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0.5, y: 20, scale: 0.95 }}
@@ -84,7 +84,7 @@ export default function Aboutme() {
 
                 
                 <div className="w-full lg:w-1/2 hidden sm:block">
-                    <div className="lg:sticky lg:top-20">
+                    <div className="lg:sticky py-15 lg:top-20">
                         {activeProject === 'portfolio' ? (
                             <div className="flex space-x-5 items-start">
                                 <div className="w-4 h-16 bg-green-500 rounded-full mt-1"></div>
