@@ -79,9 +79,26 @@ export default function Aboutme() {
                         transition={{ duration: 0.5, ease: 'easeOut' }}
                         className="w-full h-[70vh] rounded-2xl p-2 bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-sm"
                     >
-                        <div className="bg-white h-full w-full items-center justify-center flex rounded-xl">
-                            
+                        <div className="bg-black/30 p-5 h-full w-full flex flex-col rounded-xl">
+                            <div className="w-full h-[40vh] rounded-2xl overflow-hidden">
+                                <iframe
+                                    className="w-full h-full"
+                                    src="https://www.youtube.com/embed/AF46tPiYG5M"
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <h1 className='font-bold mt-5 text-2xl'>Check out my channel</h1>
+                            <div className='flex justify-start'>
+                                <button className='p-2 bg-white rounded-xl mt-5 text-black font-bold'>
+                                    Click here
+                                </button>
+                            </div>
+
                         </div>
+
                     </motion.div>
                 </div>
 
