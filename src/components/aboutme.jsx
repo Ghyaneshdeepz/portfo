@@ -10,7 +10,6 @@ import { SiTailwindcss, SiMongodb, SiExpress } from 'react-icons/si';
 export default function Aboutme() {
     const ref1 = useRef(null);
     const ref2 = useRef(null);
-    const navbarOffset = 90; 
 
     const [activeProject, setActiveProject] = useState('portfolio');
 
@@ -21,25 +20,29 @@ export default function Aboutme() {
             const rect1 = ref1.current.getBoundingClientRect();
             const rect2 = ref2.current.getBoundingClientRect();
 
-            if (rect2.top <= navbarOffset) {
-                setActiveProject('attendance');
-            }
-            else if (rect1.bottom > navbarOffset) {
-                setActiveProject('portfolio');
-            }
-           
-            else {
-                setActiveProject('portfolio');
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            // Calculate visible height of first card
+            const visibleHeight1 = Math.min(rect1.bottom, windowHeight) - Math.max(rect1.top, 0);
+            // Calculate visible height of second card
+            const visibleHeight2 = Math.min(rect2.bottom, windowHeight) - Math.max(rect2.top, 0);
+
+            // Make sure visibleHeight is not negative (if card is completely off-screen)
+            const vh1 = visibleHeight1 > 0 ? visibleHeight1 : 0;
+            const vh2 = visibleHeight2 > 0 ? visibleHeight2 : 0;
+
+            if (vh2 > vh1) {
+                if (activeProject !== 'attendance') setActiveProject('attendance');
+            } else {
+                if (activeProject !== 'portfolio') setActiveProject('portfolio');
             }
         }
 
         window.addEventListener('scroll', onScroll, { passive: true });
-
-        
-        onScroll();
+        onScroll(); // initial check on mount
 
         return () => window.removeEventListener('scroll', onScroll);
-    }, []);
+    }, [activeProject]);
 
     return (
         <div className="min-h-screen px-4 sm:px-8 lg:px-33">
@@ -77,12 +80,11 @@ export default function Aboutme() {
                         className="w-full h-[70vh] rounded-2xl p-2 bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-sm"
                     >
                         <div className="bg-white h-full w-full items-center justify-center flex rounded-xl">
-<h1 className='text-black text-9xl'>Deepu is Gay </h1>
+                            
                         </div>
                     </motion.div>
                 </div>
 
-                
                 <div className="w-full lg:w-1/2 hidden sm:block">
                     <div className="lg:sticky py-15 lg:top-20">
                         {activeProject === 'portfolio' ? (
