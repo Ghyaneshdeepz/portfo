@@ -47,7 +47,7 @@ export default function Aboutme() {
         };
 
         window.addEventListener('scroll', onScroll, { passive: true });
-        handleScroll(); 
+        handleScroll();
 
         return () => window.removeEventListener('scroll', onScroll);
     }, [handleScroll]);
@@ -58,9 +58,9 @@ export default function Aboutme() {
     };
 
     return (
-        <div className="min-h-screen px-4 sm:px-8 lg:px-33">
+        <div className="min-h-screen px-4 sm:px-8 lg:px-32">
             <div className="flex flex-col w-full justify-center pt-10 text-center">
-                <h1 className='uppercase text-sm font-semibold'>Featuring</h1>
+                <h1 className="uppercase text-sm font-semibold">Featuring</h1>
                 <h1 className="text-2xl sm:text-3xl font-bold">
                     Some of my{' '}
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 italic to-pink-500 bg-clip-text text-transparent">
@@ -69,7 +69,8 @@ export default function Aboutme() {
                 </h1>
             </div>
 
-            <div className="flex flex-col lg:flex-row p-4 mt-15 sm:p-6 gap-8">
+            <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-8">
+                {/* Left Section */}
                 <div className="w-full lg:w-1/2 py-10 flex flex-col gap-6">
                     <motion.div
                         ref={ref1}
@@ -116,23 +117,10 @@ export default function Aboutme() {
                     </motion.div>
                 </div>
 
+                {/* Right Section */}
                 <div className="w-full lg:w-1/2 hidden sm:block">
                     <div className="lg:sticky py-15 lg:top-20">
-                        {activeProject === 'portfolio' ? (
-                            <ProjectDetails
-                                title="Welcome to My Portfolio"
-                                description="This is an embedded version of my personal portfolio website, where I showcase my projects, technical skills, and experiences as a developer. The design and concept were inspired by the clean and interactive interface of the Blynk platform."
-                                techStack={['React', 'Node.js', 'Express.js', 'Tailwind CSS', 'MongoDB']}
-                                highlightColor="green"
-                            />
-                        ) : (
-                            <ProjectDetails
-                                title="Face Recognition Attendance System"
-                                description="This is a Face Recognition Attendance System built using the MERN stack and a Python API for facial recognition. It automates attendance marking through live webcam input using OpenCV."
-                                techStack={['React', 'Node.js', 'Express.js', 'Tailwind CSS', 'MongoDB']}
-                                highlightColor="blue"
-                            />
-                        )}
+                        <ProjectDetails project={activeProject} />
                     </div>
                 </div>
             </div>
@@ -140,33 +128,115 @@ export default function Aboutme() {
     );
 }
 
-function ProjectDetails({ title, description, techStack, highlightColor }) {
-    const icons = {
-        'React': <FaReact className="text-base" />,
-        'Node.js': <FaNodeJs className="text-base" />,
-        'Express.js': <SiExpress className="text-base" />,
-        'Tailwind CSS': <SiTailwindcss className="text-base" />,
-        'MongoDB': <SiMongodb className="text-base" />,
-    };
+function ProjectDetails({ project }) {
+    if (project === 'portfolio') {
+        return (
+            <div className="flex space-x-5 items-start">
+  <div className="w-4 h-16 bg-green-600 rounded-full mt-1"></div>
+  <div className="flex flex-col space-y-4">
+    <h1 className="text-xl sm:text-2xl font-bold">Personal Portfolio Website</h1>
+    <p className="text-sm sm:text-base text-white/60">
+      This is an embedded version of my personal portfolio website, where I showcase my projects, technical skills, and experiences as a developer. The design and concept were inspired by the clean and interactive interface of the Blynk platform.
+    </p>
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center gap-2">
+        <svg className="text-green-600" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+        </svg>
+        <p>Project Showcase: Interactive display of my latest projects with descriptions and links.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg className="text-green-600" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+        </svg>
+        <p>Technical Skills: Clear presentation of programming languages and tools I use.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg className="text-green-600" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+        </svg>
+        <p>Experience Timeline: Chronological overview of my career and development milestones.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg className="text-green-600" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+        </svg>
+        <p>Clean UI Design: Inspired by Blynk’s minimal and interactive interface for user-friendly navigation.</p>
+      </div>
+      <div className="flex gap-2.5 mt-2">
+        <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+          <FaReact className="text-base" /> React
+        </div>
+        <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+          <FaNodeJs className="text-base" /> Node.js
+        </div>
+        <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+          <SiMongodb className="text-base" /> MongoDB
+        </div>
+        <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+          <SiExpress className="text-base" /> Express.js
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    return (
-        <div className="flex space-x-5 items-start">
-            <div className={`w-4 h-16 bg-${highlightColor}-500 rounded-full mt-1`}></div>
-            <div className="flex flex-col space-y-4">
-                <h1 className="text-xl sm:text-2xl font-bold">{title}</h1>
-                <p className="text-sm sm:text-base text-white">{description}</p>
+        );
+    }
 
-                <div className="pt-4">
-                    <h2 className="text-base sm:text-lg font-semibold text-white mb-2">Tech Stack Used:</h2>
-                    <div className="pt-4 flex flex-col gap-2">
-                        {techStack.map((tech) => (
-                            <div key={tech} className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
-                                {icons[tech]} {tech}
+    if (project === 'attendance') {
+        return (
+            <div className="flex space-x-5 items-start">
+                <div className="w-4 h-16 bg-blue-600 rounded-full mt-1"></div>
+                <div className="flex flex-col space-y-4">
+                    <h1 className="text-xl sm:text-2xl font-bold">Face Recognition Attendance System</h1>
+                    <p className="text-sm sm:text-base text-white/60">
+                        This is a Face Recognition Attendance System built using the MERN stack and a Python API for facial recognition. It automates attendance marking through live webcam input using OpenCV.
+                    </p>
+                    <div className='flex flex-col gap-1.5'>
+                        <div className='flex items-center gap-2'>
+                        <svg className='text-blue-600' width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+                        </svg>
+                        <p>Live Face Detection: Real-time face recognition via webcam using OpenCV.</p>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <svg className='text-blue-600' width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+                        </svg>
+                        <p>Automated Attendance: Attendance is marked automatically when a registered face is recognized.</p>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <svg className='text-blue-600' width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+                        </svg>
+                        <p>User Management: Admin can add, update, and remove user profiles.</p>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <svg className='text-blue-600' width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" />
+                        </svg>
+                        <p>RESTful Integration: Smooth communication between MERN stack and Python API through HTTP endpoints.</p>
+                    </div>
+                    <div className='flex gap-2.5 mt-2'>
+                        <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+                                <FaReact className="text-base" /> React
                             </div>
-                        ))}
+                            <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+                                <FaNodeJs className="text-base" /> Node.js
+                            </div>
+                            <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+                                <SiMongodb className="text-base" /> MongoDB
+                            </div>
+                            <div className="w-fit px-3 py-1.5 flex items-center gap-1.5 text-sm font-medium text-white rounded-full border border-white/30 bg-[#171717]">
+                                <SiExpress className="text-base" /> Express.js
+                            </div>
+                    </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
+
+    return null;
 }
