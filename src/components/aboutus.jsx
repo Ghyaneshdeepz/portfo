@@ -7,7 +7,10 @@ export default function AboutUs() {
     <div className="h-auto p-5">
       <div className="sticky top-16 px-2 md:px-5 bg-opacity-80 flex justify-center z-10">
         <h1 className="text-[4rem] md:text-[16rem] bg-gradient-to-b from-white to-transparent bg-clip-text text-transparent transform font-bold pointer-events-none">
-          About Me
+          About <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient italic">
+  Me
+</span>
+
         </h1>
       </div>
 
