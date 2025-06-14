@@ -39,7 +39,7 @@ const FigmaConverter = () => {
 
 
   return (
-    <div className="absolute top-[70px] left-[30px] w-[718px] h-[600px] bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="absolute top-[70px] left-[30px] w-[718px] h-[575px] bg-white rounded-xl shadow-md overflow-hidden">
       <div className="flex items-center justify-between px-4 py-2 bg-gray-100 border-b border-gray-200">
         <div className="flex space-x-2">
           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -92,7 +92,7 @@ const FigmaConverter = () => {
           </button>
         </div>
 
-        <div className="w-full h-72 rounded-2xl bg-gray-200 flex items-start justify-start text-gray-800 text-sm p-4 overflow-auto">
+        <div className="w-full h-67 rounded-2xl bg-gray-200 flex items-start justify-start text-gray-800 text-sm p-4 overflow-auto">
           <pre>{output}</pre>
         </div>
       </div>
