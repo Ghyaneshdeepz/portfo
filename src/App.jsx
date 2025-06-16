@@ -21,7 +21,7 @@ export default function App() {
       <Hero />
       <AboutUs />
       <Services/>
-      <Working/>
+      {/* <Working/> */}
       <Aboutme/>
       <Reference/>
     </div>

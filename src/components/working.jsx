@@ -24,7 +24,6 @@ export default function Working() {
 
         
         <div className="hidden lg:flex lg:w-1/2 bg-[#1A1A1A] rounded-3xl p-6 items-center justify-center shadow-lg relative overflow-hidden">
-          {/* <div className="absolute w-96 h-80 bg-[#fbf9ff] rounded-full blur-[10rem] opacity-70  z-0"></div> */}
          
         </div>
       </div>

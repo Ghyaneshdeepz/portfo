@@ -83,7 +83,7 @@ export default function Hero() {
             ))}
         </motion.p>
 
-        <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mt-4">
           <button className="bg-white text-black px-6 py-2 rounded-md md:rounded-xl font-semibold shadow hover:opacity-90 transition">
             Lest Connect
           </button>
