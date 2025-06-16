@@ -23,7 +23,7 @@ export default function App() {
       <Services/>
       {/* <Working/> */}
       <Aboutme/>
-      <Reference/>
+      {/* <Reference/> */}
     </div>
   );
 }
