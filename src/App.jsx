@@ -7,7 +7,7 @@ import Bglines from "./components/bglines";
 import Working from "./components/working";
 import Aboutme from "./components/aboutme";
 import { Services } from "./services";
-import Reference from "./components/reference";
+import Skills from "./components/skills";
 export default function App() {
   return (
     <div className="text-white min-h-screen relative">
@@ -23,7 +23,7 @@ export default function App() {
       <Services/>
       {/* <Working/> */}
       <Aboutme/>
-      {/* <Reference/> */}
+      <Skills/>
     </div>
   );
 }

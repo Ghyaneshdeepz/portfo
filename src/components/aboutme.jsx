@@ -61,7 +61,7 @@ export default function Aboutme() {
         <div className="min-h-screen px-4 sm:px-8 lg:px-32">
             <div className="flex flex-col w-full justify-center pt-10 text-center">
                 <h1 className="uppercase text-sm font-semibold">Featuring</h1>
-                <h1 className="text-2xl sm:text-3xl font-bold">
+                <h1 className="text-3xl sm:text-4xl font-bold">
                     Some of my{' '}
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 italic to-pink-500 bg-clip-text text-transparent">
                         Works
@@ -70,14 +70,14 @@ export default function Aboutme() {
             </div>
 
             <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-8">
-                {/* Left Section */}
+             
                 <div className="w-full lg:w-1/2 py-10 flex flex-col gap-6">
                     <motion.div
                         ref={ref1}
                         animate={activeProject === 'portfolio' ? 'active' : 'inactive'}
                         variants={cardVariants}
                         transition={{ duration: 0.4, ease: 'easeOut' }}
-                        className="w-full h-[70vh] rounded-2xl p-2 bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-sm"
+                        className="w-full h-[70vh] rounded-2xl sm:block hidden p-2 bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-sm"
                     >
                         <div className="bg-white h-full w-full rounded-xl">
                             <iframe
@@ -132,7 +132,7 @@ function ProjectDetails({ project }) {
     if (project === 'portfolio') {
         return (
             <div className="flex space-x-5 items-start">
-  <div className="w-4 h-16 bg-green-600 rounded-full mt-1"></div>
+  <div className="w-4 h-16 bg-green-600  rounded-full mt-1"></div>
   <div className="flex flex-col space-y-4">
     <h1 className="text-xl sm:text-2xl font-bold">Personal Portfolio Website</h1>
     <p className="text-sm sm:text-base text-white/60">
