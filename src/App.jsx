@@ -8,6 +8,7 @@ import Working from "./components/working";
 import Aboutme from "./components/aboutme";
 import { Services } from "./services";
 import Skills from "./components/skills";
+import Footer from "./components/footer";
 export default function App() {
   return (
     <div className="text-white min-h-screen relative">
@@ -24,6 +25,7 @@ export default function App() {
       {/* <Working/> */}
       <Aboutme/>
       <Skills/>
+      <Footer/>
     </div>
   );
 }
