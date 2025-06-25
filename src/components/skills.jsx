@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaNodeJs,
   FaReact,
@@ -17,21 +17,42 @@ import {
 } from "react-icons/si";
 import { BsUiChecksGrid } from "react-icons/bs";
 import { TbBrandReactNative } from "react-icons/tb";
-import devil from "../assets/devil2.png";
+import devil from "../assets/dvl.png";
 
 export default function Skills() {
+  const [rotation, setRotation] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const rotateValue = window.scrollY * 0.3; // Adjust speed here
+      setRotation(rotateValue);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen w-full bg-black text-white">
       <div className="flex flex-col items-center justify-center pt-10 text-center">
-        <div className="relative w-fit">
-          <img src={devil} alt="devil" className="w-[25rem] h-auto" />
-          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-b from-transparent to-black pointer-events-none" />
+        <div className="relative w-fit overflow-hidden h-[15rem]">
+          <img
+            src={devil}
+            alt="devil"
+            className="w-[25rem] h-auto transition-transform duration-75 ease-out"
+            style={{
+              transform: `rotate(${rotation}deg)`,
+              transformOrigin: "center center",
+            }}
+          />
+          <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent to-black pointer-events-none" />
         </div>
 
-        <h1 className="uppercase mt-5 text-sm font-semibold tracking-widest">
+
+        <h1 className="uppercase mt-5 text-sm font-semibold tracking-widest drop-shadow-md">
           My Skills
         </h1>
-        <h1 className="text-3xl sm:text-4xl font-bold">
+        <h1 className="text-3xl sm:text-4xl font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]">
           The Awakening{" "}
           <span className="bg-gradient-to-r from-blue-600 via-purple-600 italic to-pink-500 bg-clip-text text-transparent">
             Mix
@@ -72,7 +93,7 @@ export default function Skills() {
             <span>Figma</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-zinc-900 text-sm rounded-lg border border-zinc-700">
-            <span className="w-[1.2rem]" /> 
+            <span className="w-[1.2rem]" />
             <span>CapCut</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-zinc-900 text-sm rounded-lg border border-zinc-700">
@@ -80,7 +101,7 @@ export default function Skills() {
             <span>Linux</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-zinc-900 text-sm rounded-lg border border-zinc-700">
-            <span className="w-[1.2rem]" /> 
+            <span className="w-[1.2rem]" />
             <span>Expo</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-zinc-900 text-sm rounded-lg border border-zinc-700">

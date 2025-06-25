@@ -29,7 +29,7 @@ const Navbar = ({ className }) => {
             Blog
           </div>
           <div className="px-4 py-1 rounded-full hover:bg-white/20 transition cursor-pointer">
-            More
+            Skills
           </div>
           <div className="px-4 py-1 rounded-full bg-white/20 hover:bg-white/30 transition cursor-pointer">
             Book a Call
