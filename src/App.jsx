@@ -10,6 +10,7 @@ import { Services } from "./services";
 import Skills from "./components/skills";
 import Footer from "./components/footer";
 import Contactme from "./components/contactme";
+import MarqueeRibbon from "./components/marquee";
 export default function App() {
   return (
     <div className="text-white min-h-screen relative">
@@ -27,6 +28,7 @@ export default function App() {
       <Aboutme/>
       <Skills/>
       <Contactme/>
+      <MarqueeRibbon/>
       <Footer/>
     </div>
   );
