@@ -8,14 +8,14 @@ export default function AboutUs() {
       <div className="sticky top-16 px-2 md:px-5 bg-opacity-80 flex justify-center z-10">
         <h1 className="text-[4rem] md:text-[16rem] bg-gradient-to-b from-white to-transparent bg-clip-text text-transparent transform font-bold pointer-events-none">
           About <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient italic">
-  Me
-</span>
+            Me
+          </span>
 
         </h1>
       </div>
 
       <div className="grid grid-cols-1 mt-5 md:mt-0 md:grid-cols-2 gap-8 md:px-40 relative z-20">
-    
+
         <div className="relative h-full w-full group">
           <div className="absolute top-0 flex w-full justify-center">
             <div
@@ -23,7 +23,7 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="flex h-auto md:h-80 flex-col gap-4 p-7 rounded-md border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
+          <div className="flex h-auto md:h-80 flex-col gap-4 p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
               Seamless Design Conversion
             </p>
@@ -54,7 +54,7 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="flex h-auto md:h-80 flex-col gap-4 p-7 rounded-md border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
+          <div className="flex h-auto md:h-80 flex-col gap-4 p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
               Speed Up Development
             </p>
@@ -83,7 +83,7 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="flex h-auto md:h-80 flex-col gap-4 p-7 rounded-md border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
+          <div className="flex h-auto md:h-80 flex-col gap-4 p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
               Clean & Ready-to-Use Code
             </p>
@@ -105,7 +105,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-       
+
         <div className="relative h-full w-full group">
           <div className="absolute top-0 flex w-full justify-center">
             <div
@@ -113,7 +113,7 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="flex h-auto md:h-80 flex-col gap-5 p-7 rounded-md border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
+          <div className="flex h-auto md:h-80 flex-col gap-5 p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
               Fully Customizable Output
             </p>

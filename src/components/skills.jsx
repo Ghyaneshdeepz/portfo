@@ -17,14 +17,14 @@ import {
 } from "react-icons/si";
 import { BsUiChecksGrid } from "react-icons/bs";
 import { TbBrandReactNative } from "react-icons/tb";
-import devil from "../assets/dvl.png";
+import devil from "../assets/devil3.png";
 
 export default function Skills() {
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const rotateValue = window.scrollY * 0.3; // Adjust speed here
+      const rotateValue = window.scrollY * 0.3; 
       setRotation(rotateValue);
     };
 
@@ -33,9 +33,9 @@ export default function Skills() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-black text-white">
-      <div className="flex flex-col items-center justify-center pt-10 text-center">
-        <div className="relative w-fit overflow-hidden h-[15rem]">
+    <div className="min-h-auto w-full bg-black text-white">
+      <div className="flex flex-col items-center justify-center  text-center">
+        <div className="relative w-fit overflow-hidden h-[13rem]">
           <img
             src={devil}
             alt="devil"

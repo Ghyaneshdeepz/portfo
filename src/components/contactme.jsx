@@ -1,7 +1,5 @@
-export default function contactme(){
-    return(
-<div className="w-full h-auto p-15">
-
-</div>
-    );
+export default function ContactMe() {
+return(
+    <div></div>
+  );
 }
