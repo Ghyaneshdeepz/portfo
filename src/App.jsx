@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from './components/navbar';
-import { BackgroundLines } from "../src/components/background-lines";
+
 import Hero from './components/hero';
 import AboutUs from "./components/aboutus";
 import Bglines from "./components/bglines";
