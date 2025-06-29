@@ -1,6 +1,6 @@
 export default function MarqueeRibbon() {
   return (
-    <div className="relative w-full h-40 sm:h-48 md:h-60 bg-black flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-40 mt-10 sm:h-48 md:h-60 bg-black flex items-center justify-center overflow-hidden">
       
 
       <div className="absolute w-[250%] rotate-2 z-0">

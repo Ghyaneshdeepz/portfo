@@ -21,7 +21,7 @@ export default function AboutUs() {
 
           <div className="flex h-auto min-h-[300px] md:h-80 flex-col gap-4 p-6 sm:p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
-              Seamless Design Conversion
+              My academic foundation
             </p>
             <button className="md:mt-4 self-start bg-white text-black flex gap-2 px-4 py-2 rounded-[0.7rem] md:rounded-xl text-sm font-medium hover:opacity-90 transition-opacity duration-300 group-hover:opacity-0">
               Explore
@@ -30,8 +30,7 @@ export default function AboutUs() {
             <div className="absolute inset-0 p-5 md:p-6 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto z-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
               <p className="text-white sm:block hidden text-xl font-semibold">
-                Effortlessly transform your Figma designs into clean, responsive TailwindCSS code. Our tool captures layout, spacing, fonts, and colors to give you pixel-perfect UI that’s ready to integrate into your frontend project — no more tedious hand-coding.
-              </p>
+                Completed schooling in 2018 from Sacred Heart English Medium School, followed by PU and BCA from the same institution. Currently pursuing MCA at Dayananda Sagar Academy of Technology and Management, Bangalore.              </p>
             </div>
           </div>
         </div>
@@ -43,7 +42,7 @@ export default function AboutUs() {
 
           <div className="flex h-auto min-h-[300px] md:h-80 flex-col gap-4 p-6 sm:p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
-              Speed Up Development
+              Technical Internship Experience
             </p>
             <button className="md:mt-4 self-start bg-white text-black flex gap-2 px-4 py-2 rounded-[0.7rem] md:rounded-xl text-sm font-medium hover:opacity-90 transition-opacity duration-300 group-hover:opacity-0">
               Explore
@@ -52,8 +51,7 @@ export default function AboutUs() {
             <div className="absolute inset-0 p-5 md:p-6 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto z-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
               <p className="text-white sm:block hidden text-xl font-semibold">
-                Skip the repetitive parts of frontend work. By auto-generating Tailwind utility classes from your design, you save valuable time and reduce human error. Focus on building features and improving user experience, not recreating layout from scratch.
-              </p>
+                Gained hands-on experience in data cleaning, transformation, and visualization using Power BI and Looker Studio. Developed proficiency in managing cloud-based data workflows with Google Cloud Platform, including data migration and integration into BigQuery. Collaborated on real-world projects to ensure accurate and efficient data handling, improving data accessibility and reporting for the team.              </p>
             </div>
           </div>
         </div>
@@ -65,7 +63,7 @@ export default function AboutUs() {
 
           <div className="flex h-auto min-h-[300px] md:h-80 flex-col gap-4 p-6 sm:p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
-              Clean & Ready-to-Use Code
+              Professional Certifications and Training
             </p>
             <button className="md:mt-4 self-start bg-white text-black flex gap-2 px-4 py-2 rounded-[0.7rem] md:rounded-xl text-sm font-medium hover:opacity-90 transition-opacity duration-300 group-hover:opacity-0">
               Explore
@@ -74,7 +72,8 @@ export default function AboutUs() {
             <div className="absolute inset-0 p-5 md:p-6 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto z-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
               <p className="text-white sm:block hidden text-xl font-semibold">
-                Get structured, production-grade code that’s easy to read, scale, and maintain. Every component follows best practices in TailwindCSS, making it effortless to plug into modern frameworks like React, Vue, or Next.js — without any refactoring.
+Completed Full Stack Java Development from TCS, funded by Capgemini. Developed strong skills in building robust backend services using Spring Boot, creating dynamic frontends with React, and testing APIs efficiently with Postman. The program emphasized practical, real-world application development, agile methodologies, and collaboration, preparing me to contribute effectively in professional software development teams.
+
               </p>
             </div>
           </div>
@@ -87,7 +86,7 @@ export default function AboutUs() {
 
           <div className="flex h-auto min-h-[300px] md:h-80 flex-col gap-5 p-6 sm:p-7 rounded-2xl border border-gray-800 bg-gradient-to-b from-gray-950 to-black">
             <p className="text-4xl font-bold text-gray-200 transition-opacity duration-300 group-hover:opacity-0">
-              Fully Customizable Output
+              Home town and roots
             </p>
             <button className="md:mt-4 self-start bg-white text-black flex gap-2 px-4 py-2 rounded-[0.7rem] md:rounded-xl text-sm font-medium hover:opacity-90 transition-opacity duration-300 group-hover:opacity-0">
               Explore
@@ -96,8 +95,7 @@ export default function AboutUs() {
             <div className="absolute inset-0 p-5 md:p-6 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto z-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
               <p className="text-white sm:block hidden text-xl font-semibold">
-                Get structured, production-grade code that’s easy to read, scale, and maintain. Every component follows best practices in TailwindCSS, making it effortless to plug into modern frameworks like React, Vue, or Next.js — without any refactoring.
-              </p>
+                Born and raised in Mangalore, a vibrant coastal city known for its rich culture and scenic beauty. Growing up here has shaped my values, work ethic, and appreciation for diversity.              </p>
             </div>
           </div>
         </div>

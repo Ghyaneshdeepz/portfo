@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center  text-white px-6">
       <Bglines />
-      <h1 className="text-4xl md:text-4xl lg:text-[4rem] font-bold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+      <h1 className="text-4xl md:text-4xl lg:text-[4rem] font-bold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-[#F8FAFC] dark:to-[#F8FAFC]">
         I help founders turn ideas<br />into seamless digital <Cover className="cursor-pointer">experiences</Cover>
       </h1>
       <p className="text-lg md:text-xl text-white dark:text-neutral-300 max-w-3xl mx-auto text-center mt-2">
