@@ -42,7 +42,9 @@ export function Services() {
               </div>
 
               <div className="absolute bottom-[-38px] left-17 transform -translate-x-1/2 opacity-0 group-hover:bottom-5 group-hover:opacity-100 transition-all duration-300 cursor-pointer ease-in-out bg-[#1D1D1D] flex items-center rounded-md justify-center p-1 w-23">
-                <h1 className="font-bold text-xs text-gray-200">Check Out</h1>
+                <a href="https://troudz.com/" className="hover:underline">
+                          Click here
+                        </a>
               </div>
             </div>
 
@@ -60,10 +62,23 @@ export function Services() {
                   <FaWhatsapp size={30} className="text-gray-500" />
                 </div>
                 <div className="w-16 h-16 bg-transparent hover:-translate-y-2 transform-all duration-300 flex items-center justify-center rounded-full cursor-pointer shadow-[inset_0_0_15px_#575757] z-5 ">
-                  <FaInstagram size={30} className="text-gray-500" />
+                  <a
+                    href="https://instagram.com/ghyanesh_42"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram size={30} className="text-gray-500" />
+                  </a>
+
                 </div>
                 <div className="w-14 h-14 bg-transparent hover:-translate-y-2 transform-all duration-300 flex items-center justify-center rounded-full cursor-pointer shadow-[inset_0_0_15px_#575757] z-5 ">
-                  <FaGithub size={30} className="text-gray-500" />
+                  <a
+                    href="https://github.com/Ghyaneshdeepz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub size={30} className="text-gray-500" />
+                  </a>
                 </div>
               </div>
               <div className="absolute bottom-[-38px] left-26 transform -translate-x-1/2 opacity-0 group-hover:bottom-5 group-hover:opacity-100 transition-all duration-300 cursor-pointer ease-in-out bg-[#1D1D1D] flex items-center rounded-md justify-center p-1 w-40">
@@ -106,7 +121,12 @@ export function Services() {
                       </h1>
                     </div>
                     <div className="bg-[#1A1B1B] flex items-center cursor-pointer rounded-md justify-center p-1 w-23">
-                      <h1 className="font-bold text-xs text-gray-200">Click here</h1>
+                      <h1 className="font-bold text-xs text-gray-200">
+                        <a href="https://lookerstudio.google.com/reporting/bbbb08ff-ea0d-48ae-bbdb-8a4b987cef21" className="hover:underline">
+                          Click here
+                        </a>
+                      </h1>
+
                     </div>
                   </div>
                   <div className="w-full mt-[5.5rem] flex flex-col space-y-3.5 items-center justify-center">
@@ -120,7 +140,12 @@ export function Services() {
                       </span>
                     </div>
 
-                    <FaYoutube size={35} className="text-red-500 cursor-pointer" />
+
+
+                    <a href="https://www.youtube.com/@TechBeedi" target="_blank" rel="noopener noreferrer">
+                      <FaYoutube size={35} className="text-red-500 cursor-pointer" />
+                    </a>
+
                   </div>
 
                 </div>
