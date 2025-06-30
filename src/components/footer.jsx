@@ -15,7 +15,7 @@ export default function Footer() {
                 }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-70 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 
             <div className="relative z-20 px-4 pt-20 flex flex-col items-center text-center gap-4">
                 <img
