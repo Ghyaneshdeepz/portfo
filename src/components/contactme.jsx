@@ -4,16 +4,16 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 
 function SpaceBoiModel({ targetRotateY }) {
   const group = useRef();
-  const currentRotateY = useRef(Math.PI * 0.1);
+  const currentRotateY = useRef(Math.PI * -0.06); // Initial tilt to the right
   const gltf = useGLTF('/models/space_boi.glb');
 
   useFrame(() => {
     if (group.current) {
       const baseRotationX = 0.2;
-      const baseRotationZ = -0.05;
+      const baseRotationZ = -0.06;
 
       // Idle slow rotation
-      const idleSpeed = 0.005;
+      const idleSpeed = 0.006;
       currentRotateY.current += idleSpeed;
 
       // Smoothly interpolate towards target rotation
@@ -34,12 +34,15 @@ function SpaceBoiModel({ targetRotateY }) {
 
 export default function ContactMe() {
   const containerRef = useRef();
-  const targetRotateYRef = useRef(Math.PI * 0.1);
-  const [targetRotateY, setTargetRotateY] = useState(Math.PI * 0.1);
+
+  // ✅ Use same initial value as in the model
+  const INITIAL_ROTATE_Y = Math.PI * -0.06;
+
+  const targetRotateYRef = useRef(INITIAL_ROTATE_Y);
+  const [targetRotateY, setTargetRotateY] = useState(INITIAL_ROTATE_Y);
   const [startScrollY, setStartScrollY] = useState(null);
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
     let ticking = false;
 
     const handleScroll = () => {
@@ -53,26 +56,28 @@ export default function ContactMe() {
           const modelHeight = rect.height;
           const visibleRatio = visibleHeight / modelHeight;
 
-          if (visibleRatio >= 0.05) {
+          if (visibleRatio >= 0.06) {
             const currentScrollY = window.scrollY;
 
-            // Initialize startScrollY only once when model is visible
+            // Initialize scroll start point
             if (startScrollY === null) {
               setStartScrollY(currentScrollY);
             }
 
             const scrollDelta = currentScrollY - (startScrollY || currentScrollY);
-            const newTarget = Math.PI * 0.1 + scrollDelta * 0.001;
+
+            // ✅ Start scroll from same initial Y rotation
+            const newTarget = INITIAL_ROTATE_Y + scrollDelta * 0.001;
 
             if (Math.abs(targetRotateYRef.current - newTarget) > 0.001) {
               targetRotateYRef.current = newTarget;
               setTargetRotateY(newTarget);
             }
           } else {
-            // Reset when model is out of view
+            // Reset when out of view
             setStartScrollY(null);
-            targetRotateYRef.current = Math.PI * 0.1;
-            setTargetRotateY(Math.PI * 0.1);
+            targetRotateYRef.current = INITIAL_ROTATE_Y;
+            setTargetRotateY(INITIAL_ROTATE_Y);
           }
 
           ticking = false;
@@ -83,7 +88,7 @@ export default function ContactMe() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    handleScroll(); // trigger on mount
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [startScrollY]);
