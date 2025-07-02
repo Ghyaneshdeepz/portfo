@@ -27,8 +27,8 @@ export default function App() {
       {/* <Working/> */}
       <Aboutme/>
       <Skills/>
-      <Contactme/>
       <MarqueeRibbon/>
+      <Contactme/>
       <Footer/>
     </div>
   );

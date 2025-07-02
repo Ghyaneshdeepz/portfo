@@ -49,10 +49,10 @@ export default function Skills() {
         </div>
 
 
-        <h1 className="uppercase mt-5 text-sm font-semibold tracking-widest drop-shadow-md">
+        <h1 className="uppercase mt-5 text-md font-semibold tracking-widest drop-shadow-md">
           My Skills
         </h1>
-        <h1 className="text-3xl sm:text-4xl font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]">
+        <h1 className="text-3xl sm:text-5xl font-bold ">
           The Awakening{" "}
           <span className="bg-gradient-to-r from-blue-600 via-purple-600 italic to-pink-500 bg-clip-text text-transparent">
             Mix
