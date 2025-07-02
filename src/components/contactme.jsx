@@ -55,33 +55,24 @@ export default function ContactMe() {
 
           if (visibleRatio >= 0.05) {
             const currentScrollY = window.scrollY;
-            const scrollingDown = currentScrollY > lastScrollY;
-            const scrollingUp = currentScrollY < lastScrollY;
 
-            if (scrollingDown) {
-              if (startScrollY === null) {
-                setStartScrollY(currentScrollY);
-              }
-            } else if (scrollingUp) {
-              // Reset startScrollY on upward scroll to smoothly reset rotation
+            // Initialize startScrollY only once when model is visible
+            if (startScrollY === null) {
               setStartScrollY(currentScrollY);
             }
 
             const scrollDelta = currentScrollY - (startScrollY || currentScrollY);
             const newTarget = Math.PI * 0.1 + scrollDelta * 0.001;
 
-            // Update only if change is meaningful to reduce renders
             if (Math.abs(targetRotateYRef.current - newTarget) > 0.001) {
               targetRotateYRef.current = newTarget;
               setTargetRotateY(newTarget);
             }
-
-            lastScrollY = currentScrollY;
           } else {
+            // Reset when model is out of view
             setStartScrollY(null);
             targetRotateYRef.current = Math.PI * 0.1;
             setTargetRotateY(Math.PI * 0.1);
-            lastScrollY = window.scrollY;
           }
 
           ticking = false;
