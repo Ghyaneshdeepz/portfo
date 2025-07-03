@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, OrbitControls } from '@react-three/drei';
-
+import qr from "../assets/qrc.png"
 function SpaceBoiModel({ targetRotateY }) {
   const group = useRef();
-  const currentRotateY = useRef(Math.PI * -0.06); // Initial tilt to the right
+  const currentRotateY = useRef(Math.PI * -0.06); 
   const gltf = useGLTF('/models/space_boi.glb');
 
   useFrame(() => {
@@ -94,16 +94,27 @@ export default function ContactMe() {
   }, [startScrollY]);
 
   return (
-    <div ref={containerRef} className="h-screen w-full">
-      <Canvas camera={{ position: [5, 3, 19], fov: 50 }}>
-        <fog attach="fog" args={['#000000', 10, 25]} />
-        <ambientLight intensity={1} />
-        <directionalLight position={[5, 9, 5]} intensity={1} />
+    <div className="relative h-screen w-full">
+     
+      <div className="absolute top-0 left-0 z-10  flex justify-start items-center pl-20 w-full h-screen">
+        <div className="w-[28rem] h-auto">
+          
+          <img src={qr} className='mt-5 h-auto w-35 rounded-2xl'/>
+        </div>
+      </div>
 
-        <SpaceBoiModel targetRotateY={targetRotateY} />
+      {/* 3D Model Canvas */}
+      <div ref={containerRef} className="h-screen w-full">
+        <Canvas camera={{ position: [5, 3, 19], fov: 50 }}>
+          <fog attach="fog" args={['#000000', 10, 25]} />
+          <ambientLight intensity={1} />
+          <directionalLight position={[5, 9, 5]} intensity={1} />
 
-        <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
-      </Canvas>
+          <SpaceBoiModel targetRotateY={targetRotateY} />
+
+          <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
+        </Canvas>
+      </div>
     </div>
   );
 }
