@@ -24,11 +24,11 @@ export default function Footer() {
                     className="w-24 sm:w-28 md:w-32"
                     loading="lazy"
                 />
-                <h1 className="text-3xl sm:text-4xl font-medium italic text-white">
-                    Turning Ideas Into <span className="font-bold">Reality</span>
+                <h1 className="text-3xl sm:text-4xl font-bold  text-white">
+                    Turning Ideas Into <span className="font-medium italic">Reality</span>
                 </h1>
-                <h1 className="text-3xl sm:text-4xl font-medium italic text-white">
-                    <span className=" font-bold">Let’s Build</span> Something Great Together
+                <h1 className="text-3xl sm:text-4xl font-bold  text-white">
+                    <span className=" font-medium italic">Let’s Build</span> Something Great Together
                 </h1>
 
                 <div className="mt-10">
@@ -61,7 +61,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <h3 className="font-semibold mb-1">Address</h3>
-                        <p>Mangalore Namma Kudla</p>
+                        <p>Mangalore 574224</p>
                     </div>
                 </div>
             </footer>

@@ -4,13 +4,13 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 import qr from "../assets/qrc.png"
 function SpaceBoiModel({ targetRotateY }) {
   const group = useRef();
-  const currentRotateY = useRef(Math.PI * -0.06); 
+  const currentRotateY = useRef(Math.PI * -0.07); 
   const gltf = useGLTF('/models/space_boi.glb');
 
   useFrame(() => {
     if (group.current) {
       const baseRotationX = 0.2;
-      const baseRotationZ = -0.06;
+      const baseRotationZ = -0.07;
 
       // Idle slow rotation
       const idleSpeed = 0.006;
@@ -36,7 +36,7 @@ export default function ContactMe() {
   const containerRef = useRef();
 
   // ✅ Use same initial value as in the model
-  const INITIAL_ROTATE_Y = Math.PI * -0.06;
+  const INITIAL_ROTATE_Y = Math.PI * -0.07;
 
   const targetRotateYRef = useRef(INITIAL_ROTATE_Y);
   const [targetRotateY, setTargetRotateY] = useState(INITIAL_ROTATE_Y);
@@ -56,7 +56,7 @@ export default function ContactMe() {
           const modelHeight = rect.height;
           const visibleRatio = visibleHeight / modelHeight;
 
-          if (visibleRatio >= 0.06) {
+          if (visibleRatio >= 0.07) {
             const currentScrollY = window.scrollY;
 
             // Initialize scroll start point
