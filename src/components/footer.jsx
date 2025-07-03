@@ -24,10 +24,10 @@ export default function Footer() {
                     className="w-24 sm:w-28 md:w-32"
                     loading="lazy"
                 />
-                <h1 className="text-3xl sm:text-4xl font-bold  text-white">
+                <h1 className="text-2xl sm:text-4xl font-bold  text-white">
                     Turning Ideas Into <span className="font-medium italic">Reality</span>
                 </h1>
-                <h1 className="text-3xl sm:text-4xl font-bold  text-white">
+                <h1 className="text-2xl sm:text-4xl font-bold  text-white">
                     <span className=" font-medium italic">Let’s Build</span> Something Great Together
                 </h1>
 
@@ -37,33 +37,44 @@ export default function Footer() {
                 </div>
             </div>
 
-            <footer className="relative z-20 mt-auto border-t border-white/30 px-4 py-6 sm:px-6 md:px-8 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 text-white">
-                <div className="flex-shrink-0 mb-4 md:mb-0 flex justify-center md:justify-start w-full md:w-auto">
+            <footer className="relative z-20 mt-auto md:border-t md:border-white/30 px-4 py-6 sm:px-6 md:px-8 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 text-white">
+                <div className="flex-shrink-0 mb-2 md:mb-0 flex justify-center md:justify-start w-full md:w-auto">
                     <img
                         src={logo}
                         alt="Techbeedi Logo"
-                        className="w-24 sm:w-28 md:w-32"
+                        className="w-24 sm:block hidden sm:w-28 md:w-32"
                         loading="lazy"
                     />
                 </div>
-                <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 sm:gap-8 text-center sm:text-left w-full md:w-auto text-sm sm:text-base">
-                    <div>
-                        <h3 className="font-semibold mb-1">Phone</h3>
-                        <a href="tel:+919108591464" className="hover:underline block">
-                            +91 9108591464
-                        </a>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold mb-1">Email</h3>
-                        <a href="mailto:ghyanesh.co@gmail.com" className="hover:underline block">
-                            ghyanesh.co@gmail.com
-                        </a>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold mb-1">Address</h3>
-                        <p>Mangalore 574224</p>
-                    </div>
-                </div>
+                <div className="flex flex-col sm:flex-row justify-start items-start w-full text-sm sm:text-base gap-4 sm:gap-8">
+
+  {/* Email on top */}
+  <div className="w-full">
+    <h3 className="font-semibold mb-1">Email</h3>
+    <a href="mailto:ghyanesh.co@gmail.com" className="hover:underline block">
+      ghyanesh.co@gmail.com
+    </a>
+  </div>
+
+  {/* Phone & Address in a row below */}
+  <div className="flex w-full justify-between gap-4">
+    {/* Phone */}
+    <div>
+      <h3 className="font-semibold mb-1">Phone</h3>
+      <a href="tel:+919108591464" className="hover:underline block">
+        +91 9108591464
+      </a>
+    </div>
+
+    {/* Address */}
+    <div className="text-right">
+      <h3 className="font-semibold mb-1">Address</h3>
+      <p>Mangalore 574224</p>
+    </div>
+  </div>
+
+</div>
+
             </footer>
         </div>
     );

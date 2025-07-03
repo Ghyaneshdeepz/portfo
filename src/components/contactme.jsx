@@ -4,7 +4,7 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 import qr from "../assets/qrc.png"
 function SpaceBoiModel({ targetRotateY }) {
   const group = useRef();
-  const currentRotateY = useRef(Math.PI * -0.07); 
+  const currentRotateY = useRef(Math.PI * -0.07);
   const gltf = useGLTF('/models/space_boi.glb');
 
   useFrame(() => {
@@ -95,13 +95,19 @@ export default function ContactMe() {
 
   return (
     <div className="relative h-screen w-full">
-     
-      <div className="absolute top-0 left-0 z-10  flex justify-start items-center pl-20 w-full h-screen">
-        <div className="w-[28rem] h-auto">
-          
-          <img src={qr} className='mt-5 h-auto w-35 rounded-2xl'/>
-        </div>
-      </div>
+
+      <div className="absolute top-0 left-0 z-10 flex justify-center items-end w-full h-screen">
+  <div className="relative z-10 flex flex-col items-center justify-center">
+  <h1 className="text-white text-xl font-semibold">Scan This QR <span className='bg-gradient-to-r text-xl font-bold from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient '>Code</span></h1>
+  <img
+    src={qr}
+    alt="QR Code"
+    className="mt-5 w-40 h-auto rounded-2xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
+  />
+</div>
+
+</div>
+
 
       {/* 3D Model Canvas */}
       <div ref={containerRef} className="h-screen w-full">
