@@ -50,7 +50,7 @@ export default function AboutUs() {
             </button>
             <div className="absolute inset-0 p-5 md:p-6 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto z-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
-              <p className="text-white text-sm md:text-xs lg:text-xl font-semibold break-words overflow-hidden text-ellipsis leading-tight">
+              <p className="text-white text-sm md:text-md lg:text-lg font-semibold break-words overflow-hidden text-ellipsis leading-tight">
 
                 Gained hands-on experience in data cleaning, transformation, and visualization using Power BI and Looker Studio. Developed proficiency in managing cloud-based data workflows with Google Cloud Platform, including data migration and integration into BigQuery. Collaborated on real-world projects to ensure accurate and efficient data handling, improving data accessibility and reporting for the team.
               </p>
@@ -74,7 +74,7 @@ export default function AboutUs() {
             </button>
             <div className="absolute inset-0 p-5 md:p-6 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto z-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
-              <p className="text-white text-sm md:text-xs lg:text-xl font-semibold break-words overflow-hidden text-ellipsis leading-tight">
+              <p className="text-white text-sm md:text-md lg:text-lg font-semibold break-words overflow-hidden text-ellipsis leading-tight">
                 Completed Full Stack Java Development from TCS, funded by Capgemini. Developed strong skills in building robust backend services using Spring Boot, creating dynamic frontends with React, and testing APIs efficiently with Postman. The program emphasized practical, real-world application development, agile methodologies, and collaboration, preparing me to contribute effectively in professional software development teams.
 
               </p>
