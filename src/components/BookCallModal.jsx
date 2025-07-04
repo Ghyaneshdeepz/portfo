@@ -10,21 +10,27 @@ const BookCallModal = ({ onClose }) => {
                 </div>
 
                 <div className="w-full mt-6 h-12 flex justify-between rounded-lg py-2 bg-[#1c1c1c] px-3">
-                    <form
-                        action="https://formspree.io/f/xwpbzjvy"
-                        method="POST"
-                    >
-                        <input
-                            type="text"
-                            name="message"
-                            placeholder="Send Message"
-                            className="h-full w-3/4 bg-transparent text-white ring-0 focus:outline-none caret-white"
-                        />
-                    </form>
-                    <button className="h-full bg-[#262626] text-white cursor-pointer rounded-md font-bold px-3">
-                        Submit
-                    </button>
-                </div>
+  <form
+    action="https://formspree.io/f/xwpbzjvy"
+    method="POST"
+    className="flex w-full justify-between"
+  >
+    <input
+      type="text"
+      name="message"
+      placeholder="Send Message"
+      required
+      className="h-full w-3/4 bg-transparent text-white ring-0 focus:outline-none caret-white"
+    />
+    <button
+      type="submit"
+      className="h-full bg-[#262626] text-white cursor-pointer rounded-md font-bold px-3"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
 
                 <div className="grid grid-cols-2 gap-5 mt-4">
                     <div className="bg-[#181818] rounded-2xl border border-[#2b2b2b] h-[25vh]">
